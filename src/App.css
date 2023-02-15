@@ -114,7 +114,12 @@ body {
   width: 236px;
   border-radius: 8px;
   background-color: #3D8168;
-  color: white
+  color: white;
+  transition: all 0.2s ease;
+}
+.btn__wrapper:hover {
+  background-color: #1A4032;
+  cursor: pointer;
 }
 .card__cta {
   font-family: Montserrat;
