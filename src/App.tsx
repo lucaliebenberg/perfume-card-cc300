@@ -1,34 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
 
-function App() {
-  const [count, setCount] = useState(0)
+// imports
+import CardImage from "../src/assets/Bitmap.png";
+import Button from "../src/components/Button";
 
-  return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+interface ButtonProps {
+  onClick: () => void;
 }
 
-export default App
+const App: React.FC<ButtonProps> = ({ onClick }) => {
+  return (
+    <div className="App">
+      <div className="card__wrapper">
+        <div className="card__left">
+          <img src={CardImage} alt="product image" className="card__image" />
+        </div>
+        <div className="card__right">
+          <p className="card__subtitle">Perfume</p>
+          <h1 className="card__title">Gabrielle Essence Eau De Parfum</h1>
+          <p className="card__description">
+            A floral, solar and voluptuous interpretation composed by Olivier
+            Polge, Perfumer-Creator for the House of CHANEL.
+          </p>
+          <div className="card__priceWrapper">
+            <p className="card__largePrice">$149.99</p>
+            <p className="card__smallPrice">$169.99</p>
+          </div>
+          <div className="button_wrapper">
+            {/* Button goes here */}
+            <Button onClick={onClick} />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default App;
