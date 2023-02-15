@@ -10,7 +10,7 @@ interface ButtonProps {
 const Button: React.FC<ButtonProps> = ({ onClick }) => {
   return (
     <div className="btn__wrapper" onClick={onClick}>
-      <AiOutlineShoppingCart color="white" size={16} />
+      <AiOutlineShoppingCart color="white" size={18} />
       <p className="card__cta"> Add to Cart</p>
     </div>
   );
