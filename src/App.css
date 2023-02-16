@@ -5,7 +5,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  margin: 10rem auto;
 }
 
 .card__wrapper {
@@ -130,4 +130,50 @@ body {
   text-align: left;
   color: white;
   margin-left: 0.75rem;
+}
+
+/* media queries */
+@media screen and (max-width: 375px) {
+  .card__wrapper {
+    flex-direction: column;
+    width: 343px;
+    border-radius: 10px;
+  }
+  .card__title {
+    max-width: 295px;
+  }
+  .card__description {
+    max-width: 300px;
+  }
+  .card__image {
+    height: 358px;
+    width: 344px;;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+  }
+  .card__left {
+    height: 280px;
+    width: 344px;
+  }
+  .card__right {
+    min-height: 385px;
+    width: 290px;
+    border-radius: 0 0 10px 10px;
+  }
+  /* Button styling */
+.button__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  .btn__wrapper {
+    margin: 0 auto;
+    height: 48px;
+    width: 295px;
+    border-radius: 8px;
+  }
+  .btn__wrapper:hover {
+    background-color: #1A4032;
+    cursor: pointer;
+  }
 }
