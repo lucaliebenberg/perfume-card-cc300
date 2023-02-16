@@ -6,7 +6,7 @@ import CardImage from "../src/assets/Bitmap.png";
 import Button from "../src/components/Button";
 
 interface ButtonProps {
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 const App: React.FC<ButtonProps> = ({ onClick }) => {

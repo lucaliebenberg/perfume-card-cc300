@@ -4,12 +4,12 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import "../../src/App.css";
 
 interface ButtonProps {
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 const Button: React.FC<ButtonProps> = ({ onClick }) => {
   return (
-    <div className="btn__wrapper" onClick={onClick}>
+    <div className="btn__wrapper">
       <AiOutlineShoppingCart color="white" size={20} />
       <p className="card__cta"> Add to Cart</p>
     </div>
