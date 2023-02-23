@@ -163,13 +163,13 @@ body {
   /* Button styling */
 .button__wrapper {
   display: flex;
+  margin-right: 0.25rem;
   justify-content: center;
   align-items: center;
 }
   .btn__wrapper {
-    margin: 0 auto;
     height: 48px;
-    width: 295px;
+    width: 280px;
     border-radius: 8px;
   }
   .btn__wrapper:hover {
