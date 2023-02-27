@@ -133,7 +133,7 @@ body {
 }
 
 /* media queries */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 675px) {
   .card__wrapper {
     flex-direction: column;
     width: 343px;
